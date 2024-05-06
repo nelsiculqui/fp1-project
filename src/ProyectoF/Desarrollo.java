@@ -39,30 +39,9 @@ public class Desarrollo {
                 10.85,16.61,6.27,3.73,32.97,53.98,12.97,18.98,7.03,3.98,21.69,22.37,23.98,25.00,29.58,49.15,10.93,16.61,6.36,3.81,3.81,3.81,3.81,
                 3.81,32.97,53.98,12.97,18.98,7.03,3.98,4.07,4.07,4.07,4.07,21.61,22.37,23.98,25.00};
 
-        String calTipodeCoV = identificarTipoCoV(NumeroFactura,TipoFactura);
-
-
-        System.out.println(calTipodeCoV);
-
 
     }
 
-    private static String identificarTipoCoV(String[] numeroFactura, String[] tipoFactura) {
-        String abc = "";
-        String dettipo = "";
-        int valorc = 0, valorv = 0;
-        for (int i=0; i<numeroFactura.length; i++){
-            dettipo = numeroFactura[i].substring(11,12);
-            if (dettipo.equals("C")){
-                valorc++;
-            }
-            if (dettipo.equals("V")){
-                valorv++;
-            }
-        }
-        abc = "La cantidad de facturas de compras fue de: "+valorc+" y la cantidad de facturas de ventas fue de: "+valorv;
-        return abc;
-    }
 
 
 }
